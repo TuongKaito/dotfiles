@@ -8,5 +8,5 @@ return {
 			flavour = "frappe",
 			transparent_background = true, -- disables setting the background color.
 		})
-	end
+	end,
 }

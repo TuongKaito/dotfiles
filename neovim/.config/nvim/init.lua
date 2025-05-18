@@ -21,7 +21,6 @@ vim.opt.rtp:prepend(lazypath)
 -- Setup lazy.nvim
 require("lazy").setup({
 	require("plugins.explorer"),
-	require("plugins.colorscheme"),
 	require("plugins.bufferline"),
   require("plugins.breadcrumb"),
 	require("plugins.statusline"),
@@ -36,9 +35,11 @@ require("lazy").setup({
   require("plugins.autopairs"),
   require("plugins.ai-codes.codeium"),
   require("plugins/gits/diff"),
+	require("plugins.colorschemes.catppuccin"),
+	require("plugins.colorschemes.kanagawa"),
 })
 
-vim.cmd.colorscheme "catppuccin"
+vim.cmd.colorscheme "kanagawa"
 
 require("customs.options")
 require("customs.keymaps")
