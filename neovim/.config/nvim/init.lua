@@ -20,6 +20,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy.nvim
 require("lazy").setup({
+  require("plugins.dashboard"),
 	require("plugins.explorer"),
 	require("plugins.bufferline"),
   require("plugins.breadcrumb"),
@@ -41,6 +42,6 @@ require("lazy").setup({
 
 vim.cmd.colorscheme "kanagawa"
 
+require("config.autocmds")
 require("customs.options")
 require("customs.keymaps")
-

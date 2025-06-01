@@ -2,11 +2,11 @@ local function custom_on_attach(bufnr)
 	local api = require("nvim-tree.api")
 
 	local function opts(desc)
-      return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
-    end
+    return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+  end
 
-    -- default mappings
-    api.config.mappings.default_on_attach(bufnr)
+  -- default mappings
+  api.config.mappings.default_on_attach(bufnr)
 
 	-- remove from a default
 	vim.keymap.del("n", "E",     { buffer = bufnr }) -- due to conflict toggle tree
@@ -27,7 +27,7 @@ return {
   },
   config = function()
     require("nvim-tree").setup {
-	  on_attach = custom_on_attach,
+      on_attach = custom_on_attach,
       hijack_cursor = false,
       auto_reload_on_write = true,
       disable_netrw = false,
@@ -106,7 +106,7 @@ return {
               color = true,
             },
           },
-          git_placement = "before",
+          git_placement = "after",
           modified_placement = "after",
           hidden_placement = "after",
           diagnostics_placement = "signcolumn",
@@ -139,12 +139,13 @@ return {
               symlink = "",
               symlink_open = "",
             },
+
             git = {
-              unstaged = "✗",
-              staged = "✓",
+              unstaged = "✎",
+              staged = "☑",
               unmerged = "",
               renamed = "➜",
-              untracked = "★",
+              untracked = "✧",
               deleted = "",
               ignored = "◌",
             },
@@ -152,8 +153,8 @@ return {
         },
       },
       hijack_directories = {
-        enable = true,
-        auto_open = true,
+        enable = false,
+        auto_open = false,
       },
       update_focused_file = {
         enable = false,
@@ -225,7 +226,7 @@ return {
         change_dir = {
           enable = true,
           global = false,
-          restrict_above_cwd = false,
+          restrict_above_cwd = true,
         },
         expand_all = {
           max_folder_discovery = 300,
