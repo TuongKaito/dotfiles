@@ -52,7 +52,7 @@ return {
         preserve_window_proportions = false,
         number = false,
         relativenumber = false,
-        signcolumn = "yes",
+        signcolumn = "no",
         width = 30,
         float = {
           enable = false,
@@ -85,7 +85,7 @@ return {
         highlight_bookmarks = "none",
         highlight_clipboard = "name",
         indent_markers = {
-          enable = false,
+          enable = true,
           inline_arrows = true,
           icons = {
             corner = "└",
@@ -157,7 +157,7 @@ return {
         auto_open = false,
       },
       update_focused_file = {
-        enable = false,
+        enable = true,
         update_root = {
           enable = false,
           ignore_list = {},
